@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { useAppContext } from '@/contexts/AppContext';
-import { Upload, FileSpreadsheet, Shield, Loader2 } from 'lucide-react';
+import { Upload, Shield, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
@@ -40,8 +40,8 @@ export default function WelcomeScreen() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4" style={{ background: 'linear-gradient(135deg, hsl(210 40% 96%), hsl(214 32% 91%))' }}>
       <Card className="max-w-[480px] w-full p-10 text-center space-y-6 animate-fade-in rounded-[20px] shadow-lg">
-        <div className="w-16 h-16 rounded-full bg-info-light mx-auto flex items-center justify-center">
-          <FileSpreadsheet className="w-8 h-8 text-primary" />
+        <div className="w-20 h-20 mx-auto flex items-center justify-center">
+          <img src="/logo.png" alt="SyncSheet" className="w-full h-full object-contain" />
         </div>
         <div>
           <h1 className="text-3xl font-display font-bold text-foreground">SyncSheet - Gestão Financeira</h1>

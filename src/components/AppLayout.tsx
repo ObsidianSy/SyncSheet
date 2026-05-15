@@ -73,8 +73,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
       )}>
         <div className="p-5 flex items-center gap-3 border-b border-sidebar-border">
-          <div className="w-9 h-9 rounded-lg bg-sidebar-primary flex items-center justify-center">
-            <BarChart3 className="w-5 h-5 text-white" />
+          <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center overflow-hidden">
+            <img src="/logo.png" alt="SyncSheet" className="w-9 h-9 object-contain" />
           </div>
           <div className="flex flex-col">
             <span className="text-base font-display font-bold text-sidebar-foreground leading-tight">SyncSheet</span>
