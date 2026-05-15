@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 96%;
+    --foreground: 215 25% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 17%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 149 80% 90%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 48 96% 89%;
+
+    --danger: 0 72% 51%;
+    --danger-light: 0 93% 94%;
+
+    --info: 217 91% 60%;
+    --info-light: 214 95% 93%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 28% 17%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 217 91% 60%;
+    --sidebar-hover: 217 33% 17%;
+    --sidebar-active: 210 50% 20%;
+    --sidebar-muted: 215 20% 65%;
+
+    --table-header: 222 47% 11%;
+    --table-header-foreground: 0 0% 100%;
+    --table-row-alt: 210 40% 98%;
+    --table-hover: 214 95% 93%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .kpi-card {
+    @apply bg-card rounded-2xl shadow-sm border p-5 flex items-center gap-4 transition-all duration-200;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .kpi-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    transform: translateY(-1px);
+  }
+
+  .kpi-value {
+    @apply text-2xl font-bold text-foreground;
+    font-size: 28px;
+  }
+
+  .kpi-label {
+    @apply text-muted-foreground uppercase tracking-wider mb-1;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+
+  .kpi-icon {
+    @apply w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0;
+  }
+
+  .table-header {
+    @apply bg-table-header text-table-header-foreground;
+  }
+
+  .table-header th {
+    @apply text-xs uppercase tracking-wider;
+    letter-spacing: 0.05em;
+    padding: 12px 16px;
+  }
+
+  .status-badge {
+    @apply rounded-full font-semibold;
+    padding: 3px 10px;
+    font-size: 11px;
+  }
+
+  .status-ok {
+    background: hsl(var(--success-light));
+    color: hsl(160 84% 20%);
+  }
+
+  .status-repor {
+    background: hsl(var(--warning-light));
+    color: hsl(26 90% 30%);
+  }
+
+  .status-sem-estoque {
+    background: hsl(var(--danger-light));
+    color: hsl(0 60% 30%);
+  }
+
+  .status-pago {
+    background: hsl(var(--success-light));
+    color: hsl(160 84% 20%);
+  }
+
+  .status-pendente {
+    background: hsl(var(--warning-light));
+    color: hsl(26 90% 30%);
+  }
+
+  .status-vencido {
+    background: hsl(var(--danger-light));
+    color: hsl(0 60% 30%);
+  }
+
+  .status-cancelado {
+    background: hsl(var(--danger-light));
+    color: hsl(0 60% 30%);
+  }
+
+  .section-title {
+    @apply text-lg font-semibold text-foreground mb-4;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .page-header {
+    @apply flex items-center justify-between mb-6;
+  }
+
+  .page-title {
+    @apply text-2xl font-bold text-foreground;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
